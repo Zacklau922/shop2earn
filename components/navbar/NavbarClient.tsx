@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import { Logo } from "@/components/icons";
+import { Logo } from "@/components/Icons";
 
 export const NavbarClient = () => {
   return (
