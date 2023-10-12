@@ -17,9 +17,12 @@ import { link as linkStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { SearchIcon } from "lucide-react";
+import { Logo } from "../Icons";
+import { ThemeSwitch } from "../Theme-switch";
 
-import { ThemeSwitch } from "@/components/Theme-switch";
-import { SearchIcon, Logo } from "@/components/Icons";
+// import { ThemeSwitch } from "@/components/theme-switch";
+// import { SearchIcon, Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (

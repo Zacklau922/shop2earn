@@ -1,4 +1,4 @@
-import { title } from "@/components/Primitives";
+import { title } from "@/components/primitives";
 import Usercard from "@/components/cards/UserCard";
 
 import React from "react";
