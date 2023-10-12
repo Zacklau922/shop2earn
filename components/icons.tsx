@@ -1,5 +1,7 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
+import { on } from "events";
+import { text } from "stream/consumers";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -240,3 +242,101 @@ export const CameraIcon = ({
     </svg>
   );
 };
+
+export const HomeIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24" // This viewBox value should be the same as in your SVG
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M12,2.09961l-11,9.90039h3v9h6v-6h4v6h6v-9h3z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const DocumentIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2Z"
+      fill="currentColor"
+    />
+    <path d="M16 7H8V9H16V7Z" fill="currentColor" />
+    <path d="M16 11H8V13H16V11Z" fill="currentColor" />
+    <path d="M16 15H8V17H16V15Z" fill="currentColor" />
+  </svg>
+);
+
+export const OrderIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M20,4H5.07l-0.66,4H18V7h3V4Zm-2,10H5.88L4,2H2V4H3.17l1.44,9H3v2h1v8H17v-8h1v-2h-1ZM6,19v2H5v-2Zm0-4v2H5v-2Zm4,4v2H9v-2Zm0-4v2H9v-2Zm9,4v2H18v-2Zm0-4v2H18v-2Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const RewardIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M19,6,12,3,5,6V9c0,5.05,4.16,9.37,9,12s9-6.95,9-12Zm-9,11.5C8.04,15.76,5.24,13,5.24,10H8V8H3V10c0,5.15,4.07,9.19,8,11.5Zm7.76-11.5H16V8h5V10C18.76,10,15.96,12.76,15.96,15.5Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const AccountIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2ZM12,20a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm0-14a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,10a5.92,5.92,0,0,0,6-6c-1.18,0-2.36.12-3.54,0.34C13.34,10.2,12.67,10,12,10s-1.34,.2-2-.34C8.36,10.12,7.18,10,6,10A5.92,5.92,0,0,0,12,16Z"
+      fill="currentColor"
+    />
+  </svg>
+);

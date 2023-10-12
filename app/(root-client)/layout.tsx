@@ -1,14 +1,12 @@
 import React from "react";
 import Navbartabs from "@/components/navbar/NavbarTabs";
 import { NavbarClient } from "@/components/navbar/NavbarClient";
-import MobileNavbar from "@/components/navbar/MobileNavbar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="container mx-auto max-w-7xl grow pb-16">
+    <main className="container my-12 flex h-screen max-w-md flex-col rounded-3xl border-0 border-gray-300 shadow-2xl ">
       <NavbarClient />
-      {children}
-      {/* <MobileNavbar /> */}
+      <div className="flex-1 overflow-auto">{children}</div>
       <Navbartabs />
     </main>
   );

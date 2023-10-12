@@ -2,11 +2,17 @@
 import React from "react";
 import { Tabs, Tab } from "@nextui-org/tabs";
 import Link from "next/link";
-import { DiscordIcon } from "@/components/Icons";
+import {
+  HomeIcon,
+  DocumentIcon,
+  OrderIcon,
+  RewardIcon,
+  AccountIcon,
+} from "@/components/Icons";
 
 const Navbartabs: React.FC = () => {
   return (
-    <div className="fixed bottom-0 z-50 flex w-full max-w-screen-xl items-center justify-center pb-6 pr-16">
+    <div className="flex w-full items-center justify-center">
       <Tabs
         aria-label="Options"
         color="primary"
@@ -14,7 +20,7 @@ const Navbartabs: React.FC = () => {
         radius="lg"
         variant="solid"
         classNames={{
-          cursor: "w-full bg-[#22d3ee] max-w-md mx-auto",
+          cursor: "w-full max-w-md mx-auto",
           tab: "flex-1 text-center py-2",
         }}
       >
@@ -22,8 +28,8 @@ const Navbartabs: React.FC = () => {
           key="home"
           title={
             <Link href="/home" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2.5">
-                <DiscordIcon size={20} />
+              <div className="flex cursor-pointer flex-col items-center px-2">
+                <HomeIcon />
                 <span className="text-xs font-medium">Home</span>
               </div>
             </Link>
@@ -33,8 +39,8 @@ const Navbartabs: React.FC = () => {
           key="menu"
           title={
             <Link href="/menu" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2.5">
-                <DiscordIcon size={20} />
+              <div className="flex cursor-pointer flex-col items-center px-2">
+                <DocumentIcon />
                 <span className="text-xs font-medium">Menu</span>
               </div>
             </Link>
@@ -44,8 +50,8 @@ const Navbartabs: React.FC = () => {
           key="order"
           title={
             <Link href="/order" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2.5">
-                <DiscordIcon size={20} />
+              <div className="flex cursor-pointer flex-col items-center px-2">
+                <OrderIcon />
                 <span className="text-xs font-medium">Order</span>
               </div>
             </Link>
@@ -55,8 +61,8 @@ const Navbartabs: React.FC = () => {
           key="reward"
           title={
             <Link href="/reward" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2.5">
-                <DiscordIcon size={20} />
+              <div className="flex cursor-pointer flex-col items-center px-2">
+                <RewardIcon size={20} />
                 <span className="text-xs font-medium">Reward</span>
               </div>
             </Link>
@@ -66,8 +72,8 @@ const Navbartabs: React.FC = () => {
           key="account"
           title={
             <Link href="/account" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2.5">
-                <DiscordIcon size={20} />
+              <div className="flex cursor-pointer flex-col items-center px-2">
+                <AccountIcon size={20} />
                 <span className="text-xs font-medium">Account</span>
               </div>
             </Link>
