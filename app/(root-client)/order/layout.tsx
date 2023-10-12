@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BlogLayout({
+export default function OrderLayout({
   children,
 }: {
   children: React.ReactNode;

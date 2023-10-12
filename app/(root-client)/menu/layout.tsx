@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DocsLayout({
+export default function MenuLayout({
   children,
 }: {
   children: React.ReactNode;

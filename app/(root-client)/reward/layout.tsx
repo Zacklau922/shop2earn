@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutLayout({
+export default function RewardLayout({
   children,
 }: {
   children: React.ReactNode;
