@@ -1,4 +1,4 @@
-import { title } from "@/components/Primitives";
+import { title } from "@/components/primitives";
 
 export default function AccountPage() {
   return (

@@ -8,7 +8,7 @@ import {
   OrderIcon,
   RewardIcon,
   AccountIcon,
-} from "@/components/Icons";
+} from "@/components/icons";
 
 const Navbartabs: React.FC = () => {
   return (
