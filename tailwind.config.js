@@ -76,5 +76,19 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), nextui()],
+  plugins: [
+    require("tailwindcss-animate"),
+    nextui(),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".scrollbar-hide": {
+          "scrollbar-width": "none", // Firefox
+          "&::-webkit-scrollbar": {
+            display: "none", // Chrome, Safari, etc.
+          },
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };
