@@ -9,11 +9,16 @@ import {
   RewardIcon,
   AccountIcon,
 } from "@/components/icons";
+import { usePathname } from "next/navigation";
 
 const Navbartabs: React.FC = () => {
+  const pathname = usePathname();
+  const tabKey = pathname.replace("/", "");
+
   return (
     <div className="flex w-full items-center justify-center">
       <Tabs
+        selectedKey={tabKey}
         aria-label="Options"
         color="primary"
         size="lg"
