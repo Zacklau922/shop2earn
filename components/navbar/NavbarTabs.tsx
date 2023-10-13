@@ -16,7 +16,7 @@ const Navbartabs: React.FC = () => {
   const tabKey = pathname.replace("/", "");
 
   return (
-    <div className="flex w-full items-center justify-center">
+    <div className="mb-1 flex w-full items-center justify-center rounded-2xl border-1 py-2 shadow-xl">
       <Tabs
         selectedKey={tabKey}
         aria-label="Options"
@@ -25,7 +25,7 @@ const Navbartabs: React.FC = () => {
         radius="lg"
         variant="solid"
         classNames={{
-          cursor: "w-full max-w-md mx-auto",
+          cursor: "w-full max-w-md mx-auto ",
           tab: "flex-1 text-center py-2",
         }}
       >

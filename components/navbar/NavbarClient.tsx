@@ -11,7 +11,11 @@ import { Logo } from "@/components/icons";
 
 export const NavbarClient = () => {
   return (
-    <NextUINavbar maxWidth="sm" position="sticky">
+    <NextUINavbar
+      maxWidth="sm"
+      position="sticky"
+      className="mt-2 rounded-2xl border-2 bg-slate-100 py-1 shadow-xl"
+    >
       <NavbarContent
         className="basis-1/5 sm:flex sm:basis-full"
         justify="start"

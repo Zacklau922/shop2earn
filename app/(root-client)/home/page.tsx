@@ -6,7 +6,7 @@ import React from "react";
 const Page = () => {
   return (
     <>
-      <h1 className={title()}></h1>
+      <h1 className={title()}>Good Morning!</h1>
       <Usercard />
     </>
   );

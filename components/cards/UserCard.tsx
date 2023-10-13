@@ -5,7 +5,7 @@ import { Avatar } from "@nextui-org/avatar";
 const Usercard = () => {
   return (
     <div>
-      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-xl">
+      <Card className="my-6 min-h-[180px] min-w-[320px] bg-white px-3 shadow-card">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
@@ -35,7 +35,7 @@ const Usercard = () => {
         </CardFooter>
       </Card>
 
-      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-xl">
+      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-card">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
@@ -65,7 +65,7 @@ const Usercard = () => {
         </CardFooter>
       </Card>
 
-      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-xl">
+      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-card">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
@@ -95,7 +95,7 @@ const Usercard = () => {
         </CardFooter>
       </Card>
 
-      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-xl">
+      <Card className="my-6 min-h-[180px] min-w-[320px] px-3 shadow-card">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
