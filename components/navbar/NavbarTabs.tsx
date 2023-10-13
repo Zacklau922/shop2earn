@@ -33,7 +33,7 @@ const Navbartabs: React.FC = () => {
           key="home"
           title={
             <Link href="/home" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2">
+              <div className="flex cursor-pointer flex-col items-center px-0">
                 <HomeIcon />
                 <span className="text-xs font-medium">Home</span>
               </div>
@@ -44,7 +44,7 @@ const Navbartabs: React.FC = () => {
           key="menu"
           title={
             <Link href="/menu" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2">
+              <div className="flex cursor-pointer flex-col items-center px-0">
                 <DocumentIcon />
                 <span className="text-xs font-medium">Menu</span>
               </div>
@@ -55,7 +55,7 @@ const Navbartabs: React.FC = () => {
           key="order"
           title={
             <Link href="/order" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2">
+              <div className="flex cursor-pointer flex-col items-center px-0">
                 <OrderIcon />
                 <span className="text-xs font-medium">Order</span>
               </div>
@@ -66,7 +66,7 @@ const Navbartabs: React.FC = () => {
           key="reward"
           title={
             <Link href="/reward" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2">
+              <div className="flex cursor-pointer flex-col items-center px-0">
                 <RewardIcon size={20} />
                 <span className="text-xs font-medium">Reward</span>
               </div>
@@ -77,7 +77,7 @@ const Navbartabs: React.FC = () => {
           key="account"
           title={
             <Link href="/account" passHref>
-              <div className="flex cursor-pointer flex-col items-center px-2">
+              <div className="flex cursor-pointer flex-col items-center px-0">
                 <AccountIcon size={20} />
                 <span className="text-xs font-medium">Account</span>
               </div>

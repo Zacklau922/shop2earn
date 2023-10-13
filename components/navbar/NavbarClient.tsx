@@ -11,13 +11,13 @@ import { Logo } from "@/components/icons";
 
 export const NavbarClient = () => {
   return (
-    <NextUINavbar maxWidth="sm" position="sticky" className="pt-5">
+    <NextUINavbar maxWidth="sm" position="sticky">
       <NavbarContent
         className="basis-1/5 sm:flex sm:basis-full"
         justify="start"
       >
         <NextLink className="flex items-center" href="/">
-          <Logo />
+          {/* <Logo /> */}
           <p className="font-bold text-inherit">Happy Store</p>
         </NextLink>
       </NavbarContent>
