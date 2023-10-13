@@ -5,7 +5,7 @@ import { Avatar } from "@nextui-org/avatar";
 const Usercard = () => {
   return (
     <div>
-      <Card className="min-h-[180px] min-w-[290px] shadow-xl">
+      <Card className="min-h-[180px] min-w-[320px] px-3 shadow-xl">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
