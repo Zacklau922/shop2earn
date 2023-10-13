@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const MobileNavbar = () => {
   return (
-    <div className="fixed bottom-0 z-50 flex w-full max-w-screen-xl items-center justify-center pb-6">
-      <Tabs defaultValue="Home" className="w-[420px]">
+    <div className=" mx-auto items-center justify-center pb-3">
+      <Tabs defaultValue="Home" className=" max-w-md">
         <TabsList className="">
           <TabsTrigger value="home">
             <Link href={"/home"}>Home</Link>

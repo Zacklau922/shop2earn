@@ -16,7 +16,7 @@ const Navbartabs: React.FC = () => {
   const tabKey = pathname.replace("/", "");
 
   return (
-    <div className="flex w-full items-center justify-center pb-3">
+    <div className="flex w-full items-center justify-center">
       <Tabs
         selectedKey={tabKey}
         aria-label="Options"
