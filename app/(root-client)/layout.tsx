@@ -1,6 +1,6 @@
 import React from "react";
-import { NavbarClient } from "@/components/navbar/NavbarClient";
-import Navbartabs from "@/components/navbar/NavbarTabs";
+import { NavbarClient } from "@/app/components/navbar/NavbarClient";
+import Navbartabs from "@/app/components/navbar/NavbarTabs";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
