@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Database } from "../../../types/supabase";
 import { Button } from "@nextui-org/button";
+import { Database } from "@/types/supabase";
 
 export default function AuthForm() {
   const [isLoading, setIsLoading] = useState(false);

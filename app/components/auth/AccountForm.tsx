@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import { Database } from "../../../types/supabase";
+import { Database } from "@/types/supabase";
 import {
   Session,
   createClientComponentClient,
