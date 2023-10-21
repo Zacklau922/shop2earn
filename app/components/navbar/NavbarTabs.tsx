@@ -12,6 +12,7 @@ import {
   AccountIcon,
 } from "@/app/components/icons";
 import { usePathname } from "next/navigation";
+import { TabsTrigger } from "../ui/tabs";
 
 const Navbartabs: React.FC = () => {
   const [username, setUsername] = useState<string | null>(null);
@@ -44,7 +45,7 @@ const Navbartabs: React.FC = () => {
   }, [supabase]);
 
   return (
-    <div className="mb-1 flex w-full items-center justify-center rounded-2xl border-1 py-2 shadow-xl">
+    <div className="mx-auto flex w-full max-w-md items-center justify-center rounded-2xl border-1 bg-slate-100 py-2 shadow-sm">
       <Tabs
         selectedKey={tabKey}
         aria-label="Options"
@@ -57,28 +58,28 @@ const Navbartabs: React.FC = () => {
           tab: "flex-1 text-center py-2",
         }}
       >
-        <Tab
-          key="home"
-          title={
-            <Link href={`/app/${username}/home`} passHref>
+        <Link href={`/app/${username}/home`} passHref>
+          <div className="flex-1">
+            <TabsTrigger value={tabKey}>
               <div className="flex cursor-pointer flex-col items-center px-0">
                 <HomeIcon />
                 <span className="text-xs font-medium">Home</span>
               </div>
-            </Link>
-          }
-        />
-        <Tab
-          key="menu"
-          title={
-            <Link href={`/app/${username}/menu`} passHref>
+            </TabsTrigger>
+          </div>
+        </Link>
+
+        <Link href={`/app/${username}/menu`} passHref>
+          <Tab
+            key="menu"
+            title={
               <div className="flex cursor-pointer flex-col items-center px-0">
                 <DocumentIcon />
                 <span className="text-xs font-medium">Menu</span>
               </div>
-            </Link>
-          }
-        />
+            }
+          />
+        </Link>
         <Tab
           key="order"
           title={

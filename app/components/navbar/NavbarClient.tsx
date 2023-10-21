@@ -1,11 +1,4 @@
-import {
-  Navbar as NextUINavbar,
-  NavbarContent,
-  // NavbarItem,
-} from "@nextui-org/navbar";
-// import { Button } from "@nextui-org/button";
-// import { Link } from "@nextui-org/link";
-// import { siteConfig } from "@/config/site";
+import { Navbar as NextUINavbar, NavbarContent } from "@nextui-org/navbar";
 import NextLink from "next/link";
 import { Logo } from "@/app/components/icons";
 
@@ -14,7 +7,7 @@ export const NavbarClient = () => {
     <NextUINavbar
       maxWidth="sm"
       position="sticky"
-      className="mt-2 rounded-2xl border-2 bg-slate-100 py-1 shadow-xl"
+      className="mx-auto max-w-4xl rounded-2xl bg-slate-100 shadow-lg"
     >
       <NavbarContent
         className="basis-1/5 sm:flex sm:basis-full"

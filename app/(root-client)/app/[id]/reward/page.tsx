@@ -1,9 +1,10 @@
+import Usercard from "@/app/components/cards/UserCard";
 import { title } from "@/app/components/primitives";
 
 export default function RewardPage() {
   return (
     <div>
-      <h1 className={title()}>Reward Page</h1>
+      <Usercard />
     </div>
   );
 }

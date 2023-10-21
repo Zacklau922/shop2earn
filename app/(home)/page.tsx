@@ -2,7 +2,6 @@
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-// import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/app/components/primitives";
 import { SunFilledIcon } from "@/app/components/icons";
 

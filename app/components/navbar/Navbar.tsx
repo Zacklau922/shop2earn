@@ -2,24 +2,19 @@ import {
   Navbar as NextUINavbar,
   NavbarContent,
   NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
-  NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 
-import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import clsx from "clsx";
+
 import { SearchIcon } from "lucide-react";
 import { Logo } from "../icons";
-import { ThemeSwitch } from "../theme-switch";
+
 // import { ThemeSwitch } from "../Theme-switch";
 
 // import { ThemeSwitch } from "@/components/theme-switch";
@@ -48,7 +43,7 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="md" position="sticky">
+    <NextUINavbar maxWidth="md" position="sticky" className="bg-slate-100">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="max-w-fit gap-3">
           <NextLink className="flex items-center justify-start gap-1" href="/">
@@ -56,7 +51,8 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">Shop2Earn</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="ml-2 hidden justify-start gap-4 lg:flex">
+
+        {/* <ul className="ml-2 hidden justify-start gap-4 lg:flex">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -71,7 +67,7 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
-        </ul>
+        </ul> */}
       </NavbarContent>
 
       <NavbarContent
@@ -91,7 +87,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem> */}
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
-        <NavbarItem className="hidden md:flex">
+        {/* <NavbarItem className="hidden md:flex">
           <Button
             isExternal
             as={Link}
@@ -112,15 +108,15 @@ export const Navbar = () => {
           >
             Log In
           </Button>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
 
-      <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
+      <NavbarContent className="basis-1 pl-4 lg:hidden" justify="end">
         {/* <Link isExternal href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link> */}
-        <ThemeSwitch />
-        <NavbarMenuToggle />
+        {/* <ThemeSwitch /> */}
+        {/* <NavbarMenuToggle /> */}
       </NavbarContent>
 
       <NavbarMenu>
