@@ -1,5 +1,4 @@
 import MenuCard from "@/app/components/cards/MenuCard";
-import { title } from "@/app/components/primitives";
 import { Input } from "@/app/components/ui/input";
 import { SearchIcon } from "lucide-react";
 
