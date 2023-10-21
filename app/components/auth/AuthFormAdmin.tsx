@@ -15,7 +15,7 @@ export default function AuthFormAdmin() {
       theme="light"
       showLinks={false}
       providers={[]}
-      redirectTo="http://localhost:3000/signin-admin/create-account"
+      redirectTo="/signin-admin/create-account"
     />
   );
 }

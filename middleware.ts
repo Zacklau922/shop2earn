@@ -1,3 +1,5 @@
+// mobile testing use this:
+
 // import { NextResponse } from "next/server";
 // import type { NextRequest } from "next/server";
 
@@ -9,7 +11,7 @@
 //   matcher: ["/app/:path*", "/admin/:path*"],
 // };
 
-// change back to this for sign in verification auth
+// change back to this for sign in verification auth :
 
 import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
 import { NextResponse } from "next/server";

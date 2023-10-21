@@ -20,7 +20,7 @@ export default function AuthForm() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: "http://localhost:3000/auth/callback",
+        emailRedirectTo: "/auth/callback",
       },
     });
 
