@@ -9,26 +9,31 @@ import {
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { Avatar } from "@nextui-org/avatar";
+import { useRouter } from "next/navigation";
 
-export default function AccountForm({ session }: { session: Session | null }) {
+export default function AccountFormAdmin({
+  session,
+}: {
+  session: Session | null;
+}) {
   const supabase = createClientComponentClient<Database>();
   const [loading, setLoading] = useState(true);
   const [fullname, setFullname] = useState<string | null>(null);
   const [username, setUsername] = useState<string | null>(null);
   const [website, setWebsite] = useState<string | null>(null);
   const [avatar_url, setAvatarUrl] = useState<string | null>(null);
-  const [businessName, setBusinessName] = useState<string | null>(null);
   const [phone, setPhone] = useState<string | null>(null);
+  const [usernameError, setUsernameError] = useState<string | null>(null);
 
   const user = session?.user;
-
+  const router = useRouter();
   const getProfile = useCallback(async () => {
     try {
       setLoading(true);
 
       const { data, error, status }: any = await supabase
         .from("profiles")
-        .select(`full_name, username, website, phone`)
+        .select(`full_name, username, website, phone, business_name`)
         .eq("id", user?.id)
         .single();
 
@@ -41,7 +46,7 @@ export default function AccountForm({ session }: { session: Session | null }) {
         setUsername(data.username);
         setWebsite(data.website);
         setAvatarUrl(data.avatar_url);
-        setBusinessName(data.business_name);
+
         setPhone(data.phone);
       }
     } catch (error) {
@@ -59,16 +64,44 @@ export default function AccountForm({ session }: { session: Session | null }) {
     username,
     website,
     avatar_url,
+    fullname,
+    phone,
   }: {
     username: string | null;
     fullname: string | null;
     website: string | null;
     avatar_url: string | null;
     phone: string | null;
-    businessName: string | null;
   }) {
     try {
       setLoading(true);
+
+      // Input validation
+      if (!username || !phone) {
+        alert("Fields cannot be blank!");
+        return;
+      }
+
+      // Check if the new username is different from the current one
+      const { data: currentUser }: any = await supabase
+        .from("profiles")
+        .select("username")
+        .eq("id", user?.id)
+        .single();
+
+      if (currentUser && currentUser.username !== username) {
+        // If it's different, check if the new username exists in the profiles table
+        const { data: existingUser }: any = await supabase
+          .from("profiles")
+          .select("username")
+          .eq("username", username)
+          .single();
+
+        if (existingUser && existingUser.username === username) {
+          setUsernameError("Username already exists!");
+          return;
+        }
+      }
 
       const { error } = await supabase.from("profiles").upsert({
         id: user?.id as string,
@@ -76,12 +109,12 @@ export default function AccountForm({ session }: { session: Session | null }) {
         username,
         website,
         avatar_url,
-        business_name: businessName,
         phone,
         updated_at: new Date().toISOString(),
       });
       if (error) throw error;
       alert("Profile updated!");
+      router.push(`/app/${username}/account`);
     } catch (error) {
       alert("Error updating the data!");
     } finally {
@@ -90,7 +123,7 @@ export default function AccountForm({ session }: { session: Session | null }) {
   }
 
   return (
-    <div className="p-4">
+    <div className="rounded-xl border-1 bg-white p-12 shadow-lg">
       <div>
         <Avatar
           src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
@@ -115,25 +148,32 @@ export default function AccountForm({ session }: { session: Session | null }) {
             color="default"
           />
         </div>
+
         <div className="mb-4">
           <label
-            htmlFor="fullName"
+            htmlFor="username"
             className="mb-2 block text-sm font-medium text-gray-700"
           >
-            Full Name
+            Username
           </label>
           <Input
-            id="fullName"
+            id="username"
             type="text"
-            value={fullname || ""}
-            onChange={(e) => setFullname(e.target.value)}
+            value={username || ""}
+            onChange={(e) => {
+              setUsernameError(null); // Reset error when user changes input
+              setUsername(e.target.value);
+            }}
             className="rounded-xl border-1 shadow-md"
           />
+          {usernameError && (
+            <p className="mt-2 text-xs text-red-500">{usernameError}</p>
+          )}
         </div>
 
         <div className="mb-4">
           <label
-            htmlFor="website"
+            htmlFor="phone"
             className="mb-2 block text-sm font-medium text-gray-700"
           >
             Phone
@@ -146,21 +186,6 @@ export default function AccountForm({ session }: { session: Session | null }) {
             className="rounded-xl border-1 shadow-md"
           />
         </div>
-        {session?.user.role === "admin" && (
-          <>
-            <Input
-              value={businessName || ""}
-              placeholder="Business Name"
-              onChange={(e) => setBusinessName(e.target.value)}
-            />
-            <Input
-              value={phone || ""}
-              placeholder="Phone"
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            <Input value={username || ""} placeholder={username || ""} />
-          </>
-        )}
       </div>
 
       <div className="flex justify-around">
@@ -173,7 +198,6 @@ export default function AccountForm({ session }: { session: Session | null }) {
               website,
               avatar_url,
               phone,
-              businessName,
             })
           }
           disabled={loading}

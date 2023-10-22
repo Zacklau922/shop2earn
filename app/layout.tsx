@@ -38,11 +38,11 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="mx-auto flex flex-col scrollbar-hide supports-[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh]">
-            {children}
-          </div>
+          <div className="mx-auto flex h-screen flex-col">{children}</div>
         </Providers>
       </body>
     </html>
   );
 }
+
+// supports-[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh]

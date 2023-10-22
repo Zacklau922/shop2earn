@@ -22,10 +22,10 @@ export async function GET(req: NextRequest) {
       return NextResponse.redirect(new URL(`/error`, req.url));
     }
 
-    // Get the profile's username based on the user ID
+    // Fetch the profile's username and id based on the user ID
     const { data, error: profileError } = await supabase
       .from("profiles")
-      .select("username")
+      .select("username, id")
       .eq("id", user.id)
       .single();
 
@@ -34,9 +34,12 @@ export async function GET(req: NextRequest) {
       return NextResponse.redirect(new URL(`/error`, req.url));
     }
 
-    const username = data.username;
+    // Use the username if available, otherwise use the id
+    const redirectTo = data.username || data.id;
 
-    return NextResponse.redirect(new URL(`/app/${username}/account`, req.url));
+    return NextResponse.redirect(
+      new URL(`/app/${redirectTo}/account`, req.url)
+    );
   }
 
   // Handle the case where there's no code in the query parameters

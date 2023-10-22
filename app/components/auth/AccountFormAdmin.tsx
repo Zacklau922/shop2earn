@@ -80,7 +80,7 @@ export default function AccountFormAdmin({
       setLoading(true);
 
       // Input validation
-      if (!username || !fullname || !phone || !businessName) {
+      if (!username || !phone || !businessName) {
         alert("Fields cannot be blank!");
         return;
       }
@@ -157,7 +157,7 @@ export default function AccountFormAdmin({
             htmlFor="business_name"
             className="mb-2 block text-sm font-medium text-gray-700"
           >
-            Busines Name
+            Business Name
           </label>
           <Input
             id="businessName"

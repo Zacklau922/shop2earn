@@ -44,6 +44,56 @@ export default function MenuCard() {
       img: "/8.jpg",
       price: "4500pts",
     },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
+    {
+      title: "Birthday 50% Off",
+      img: "/8.jpg",
+      price: "4500pts",
+    },
   ];
 
   return (

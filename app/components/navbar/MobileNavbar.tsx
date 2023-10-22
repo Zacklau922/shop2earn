@@ -43,12 +43,12 @@ const MobileNavbar = () => {
   }, [supabase]);
 
   return (
-    <div className="mx-auto">
+    <div className="fixed inset-x-0 bottom-0 z-10 mx-auto max-w-3xl bg-white">
       <Separator orientation="horizontal" />
 
       <div className="flex">
         <Link
-          className={`flex w-1/5 flex-col items-center border-r-1 px-6 py-2 sm:px-10 md:px-14 ${
+          className={`flex w-1/5 flex-col items-center border-r-1 px-6 py-2 active:bg-white sm:px-10 md:px-14 ${
             currentPath.includes("/home") ? "text-blue-500" : "text-slate-400"
           }`}
           href={`/app/${username}/home`}

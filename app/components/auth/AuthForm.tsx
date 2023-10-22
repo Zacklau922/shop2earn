@@ -7,6 +7,7 @@ import { Database } from "@/types/supabase";
 export default function AuthForm() {
   const [isLoading, setIsLoading] = useState(false);
   const supabase = createClientComponentClient<Database>();
+  const domainUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -20,7 +21,7 @@ export default function AuthForm() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: "/auth/callback",
+        emailRedirectTo: `${domainUrl}/auth/callback`,
       },
     });
 

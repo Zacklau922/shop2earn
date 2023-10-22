@@ -7,6 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className=" flex flex-col overflow-auto scrollbar-hide">
         <div className="mx-auto">{children}</div>
       </div>
+
       <MobileNavbar />
     </>
   );
