@@ -92,7 +92,7 @@ const MobileNavbar = () => {
         </Link>
 
         <Link
-          className={`flex w-1/5 flex-col items-center border-l-1 px-5 py-2 sm:px-10 md:px-14 ${
+          className={`flex w-1/5 flex-col items-center px-5 py-2 sm:px-10 md:px-14 ${
             currentPath.includes("/account")
               ? "text-blue-500"
               : "text-slate-400"
