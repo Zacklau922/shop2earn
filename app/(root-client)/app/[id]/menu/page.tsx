@@ -15,7 +15,9 @@ import { CartProvider } from "@/app/components/menu/CartContext";
 interface Item {
   id: number;
   name: string;
-  description: string;
+  description: string; // Include this property
+  quantity: number;
+  // Add other properties as needed
 }
 
 const categories = [

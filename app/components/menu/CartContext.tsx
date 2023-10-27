@@ -10,6 +10,7 @@ import React, {
 interface Item {
   id: number;
   name: string;
+  description: string; // Include this property
   quantity: number;
   // Add other properties as needed
 }
