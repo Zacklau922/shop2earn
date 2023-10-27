@@ -97,7 +97,7 @@ export default function MenuCard() {
   ];
 
   return (
-    <div className="my-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+    <div className="my-4 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-3 ">
       {list.map((item, index) => (
         <Card
           shadow="sm"
@@ -111,7 +111,7 @@ export default function MenuCard() {
               radius="lg"
               width="100%"
               alt={item.title}
-              className="h-[140px] w-full object-cover"
+              className="h-[180px] w-full object-cover"
               src={item.img}
             />
           </CardBody>

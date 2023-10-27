@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardBody } from "@nextui-org/card";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/app/components/ui/separator";
 import Link from "next/link";
 
 const ActionCard = () => {

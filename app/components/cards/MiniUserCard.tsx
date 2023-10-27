@@ -1,8 +1,9 @@
 import React from "react";
 import { Avatar } from "@nextui-org/avatar";
 import { Card, CardBody } from "@nextui-org/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+
+import { Separator } from "@/app/components/ui/separator";
+import { Badge } from "../ui/badge";
 
 const MiniUserCard = () => {
   return (

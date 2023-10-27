@@ -10,7 +10,7 @@ import {
   MenuIcon,
   Settings2Icon,
 } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/app/components/ui/separator";
 import { usePathname } from "next/navigation";
 
 const MobileNavbar = () => {
@@ -43,7 +43,7 @@ const MobileNavbar = () => {
   }, [supabase]);
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-10 mx-auto max-w-3xl bg-white">
+    <div className="fixed inset-x-0 bottom-0 z-10 mx-auto max-w-2xl bg-white">
       <Separator orientation="horizontal" />
 
       <div className="flex">

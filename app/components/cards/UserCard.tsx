@@ -8,7 +8,7 @@ const Usercard = () => {
     <div>
       <Card
         isPressable
-        className="mb-3 min-h-[200px] w-full bg-white px-3 shadow-card md:h-[360px] md:min-w-[684px]"
+        className="mx-auto mb-3 flex w-full max-w-2xl bg-white px-3 shadow-card"
       >
         <CardHeader className="justify-between">
           <div className="flex gap-5">

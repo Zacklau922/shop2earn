@@ -1,11 +1,17 @@
-import { DataTableDemo } from "@/app/components/Table";
-import { title } from "@/app/components/primitives";
+/* eslint-disable tailwindcss/enforces-negative-arbitrary-values */
+import ActionCard from "@/app/components/cards/ActionCard";
+import Hero from "@/app/components/image/Hero";
+import React from "react";
 
-export default function OrderPage() {
+const Page = () => {
   return (
-    <div>
-      <h1 className={title()}>Order History</h1>
-      <DataTableDemo />
+    <div className="relative">
+      <Hero />
+      <div className="flex -translate-y-[10%] flex-col gap-2">
+        <ActionCard />
+      </div>
     </div>
   );
-}
+};
+
+export default Page;
