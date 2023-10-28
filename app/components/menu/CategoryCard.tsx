@@ -4,17 +4,7 @@ import React from "react";
 import { Avatar } from "@nextui-org/avatar";
 import { Card, CardBody } from "@nextui-org/card";
 import { Separator } from "@/app/components/ui/separator";
-
-interface Item {
-  id: number;
-  name: string;
-}
-
-interface Category {
-  id: number;
-  name: string;
-  items: Item[];
-}
+import { Item, Category } from "@/types/interfaces";
 
 interface CategoryCardProps {
   category: Category;

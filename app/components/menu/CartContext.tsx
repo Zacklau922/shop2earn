@@ -5,15 +5,7 @@ import React, {
   useState,
   useEffect,
 } from "react";
-
-// Define the type for your items
-interface Item {
-  id: number;
-  name: string;
-  description: string; // Include this property
-  quantity: number;
-  // Add other properties as needed
-}
+import { Item } from "@/types/interfaces";
 
 interface CartContextType {
   cartItems: Item[];

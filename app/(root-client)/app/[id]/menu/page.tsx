@@ -10,15 +10,7 @@ import MenuItems from "@/app/components/menu/MenuItems";
 import { useDisclosure } from "@nextui-org/react";
 import CheckoutBar from "@/app/components/navbar/CheckoutBar";
 import { CartProvider } from "@/app/components/menu/CartContext";
-
-// Assuming this is the structure of your items
-interface Item {
-  id: number;
-  name: string;
-  description: string; // Include this property
-  quantity: number;
-  // Add other properties as needed
-}
+import { Item } from "@/types/interfaces";
 
 const categories = [
   {
