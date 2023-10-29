@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Link } from "@nextui-org/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "../../../types/supabase";
 import {
@@ -19,7 +19,6 @@ import {
   NavbarItem,
   Button,
   NavbarMenu,
-  NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
 
@@ -28,7 +27,6 @@ export default function AdminNavbar() {
   const [username, setUsername] = useState<string | null>(null);
   const supabase = createClientComponentClient<Database>();
   const currentPath = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
     async function fetchUsername() {
