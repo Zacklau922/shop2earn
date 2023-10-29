@@ -127,7 +127,7 @@ export default function AccountFormAdmin({
   }
 
   return (
-    <div className="rounded-xl border-1 bg-white p-12 shadow-lg">
+    <div className="m-12 mx-auto max-w-2xl rounded-xl border-1 bg-white p-8 shadow-lg">
       <div>
         <Avatar
           src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
